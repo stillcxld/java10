@@ -1,6 +1,14 @@
 public class Radio {
-    public int currentStation;
-    public int currentVolume;
+    private int currentStation;
+    private int currentVolume;
+
+    public int getCurrentStation() {
+        return currentStation;
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
 
     public void setCurrentStation(int newCurrentStation) {
         if (newCurrentStation < 0) {
