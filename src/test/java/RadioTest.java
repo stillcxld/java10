@@ -115,13 +115,13 @@ public class RadioTest {
         radio.setCurrentStation(8);
         radio.nextStation();
 
-        int expected = 0;
+        int expected = 9;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldIncreaseStationAtPostLast() {
+    public void shouldDecreaseStationAtPostLast() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
         radio.prevStation();
@@ -143,7 +143,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldIncreaseVolumeAtPostLast() {
+    public void shouldDecreaseVolumeAtPostLast() {
         Radio radio = new Radio();
         radio.setCurrentVolume(1);
         radio.decreaseVolume();
