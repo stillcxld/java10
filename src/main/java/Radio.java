@@ -25,11 +25,11 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStation < 9) {
-            currentStation++;
-        }
         if (currentStation == 9) {
             currentStation = 0;
+        }
+        if (currentStation < 9) {
+            currentStation++;
         }
     }
 
