@@ -25,20 +25,17 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStation == 9) {
-            currentStation = 0;
-            return;
-        }
         if (currentStation < 9) {
             currentStation++;
+        } else {
+            currentStation = 0;
         }
     }
 
     public void prevStation() {
         if (currentStation > 0) {
             currentStation--;
-        }
-        if (currentStation == 0) {
+        } else {
             currentStation = 9;
         }
     }
