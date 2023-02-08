@@ -40,16 +40,16 @@ public class Radio {
     public void nextStation() {
         if ((maxStation - 1) >= currentStation) {
             currentStation++;
-        } else if ((maxStation) == currentStation) {
+        } else {
             currentStation = 0;
         }
     }
 
     public void prevStation() {
-        if (currentStation == 0) {
-            currentStation = maxStation;
-        } else if (currentStation >= 1) {
+        if (currentStation > 0) {
             currentStation--;
+        } else {
+            currentStation = maxStation;
         }
     }
 
